@@ -427,3 +427,5 @@ main > .project { margin: 1.5rem auto 0; padding: 2.5rem 2.75rem; border-top: 1p
   .shot .chip.r { bottom: 3.9rem; }
 }
 @media (prefers-reduced-motion: reduce) { .btn, .toc .menu, .toc .rail i { transition: none; } }
+.edu-line { margin: -.6rem 0 1.1rem; color: var(--muted); font-size: .9375rem; }
+.edu-line strong { color: var(--ink); font-weight: 600; }
