@@ -22,7 +22,7 @@
   <a class="btn dark" href="#contact">Contact</a>
 </header>
 
-<section class="hero" id="top" aria-labelledby="h-name">
+<section class="hero" id="top" data-hero aria-labelledby="h-name">
   <div class="hero-text">
     <h1 id="h-name">PK Wu <span class="cn" lang="zh-Hant">吳芃寬</span></h1>
     <p class="statement">I build data pipelines, retrieval and voice agents, then measure whether they actually work.</p>
@@ -38,27 +38,11 @@
     <span class="chip glass tl">NTU Finance, 2026</span>
     <figcaption class="glass">BAT Battle of Minds<br><small>2nd in Taiwan, East Asia top 4</small></figcaption>
   </figure>
-  <section class="ruler glass" aria-labelledby="h-ruler">
-    <h2 id="h-ruler">Measured results</h2>
-    <p class="ruler-note">Grey is the starting point or chance level, green is the result. Each row has its own scale; click a row to jump to the project.</p>
-    <div class="rrows" role="img" aria-label="Retrieval for bank questions: 71.33% to 88.67%; Agent evaluation: 50% to 87%; Order-failure prediction: 0.5 to 0.85; Stock direction: 50% to 70%; Sports-lottery members: 113 to 150">
-<a class="rrow" href="#p-esun"><span class="rlab"><b>Retrieval for bank questions</b><small>precision@1</small></span>
-      <span class="rtrack" style="--b:42.66%;--r:77.34%"><span class="rseg"></span><span class="rdot b" title="71.33% official baseline"></span><span class="rdot r"></span><span class="rval">88.67%</span><span class="rticks" aria-hidden="true"><span style="left:0.00%">50%</span><span style="left:50.00%">75%</span><span style="left:100.00%">100%</span></span></span></a>
-<a class="rrow" href="#p-eval"><span class="rlab"><b>Agent evaluation</b><small>agreement with human labels</small></span>
-      <span class="rtrack" style="--b:0.00%;--r:74.00%"><span class="rseg"></span><span class="rdot b" title="50% coin flip"></span><span class="rdot r"></span><span class="rval">87%</span><span class="rticks" aria-hidden="true"><span style="left:0.00%">50%</span><span style="left:50.00%">75%</span><span style="left:100.00%">100%</span></span></span></a>
-<a class="rrow" href="#p-bda"><span class="rlab"><b>Order-failure prediction</b><small>AUC</small></span>
-      <span class="rtrack" style="--b:0.00%;--r:70.00%"><span class="rseg"></span><span class="rdot b" title="0.5 chance"></span><span class="rdot r"></span><span class="rval">0.85</span><span class="rticks" aria-hidden="true"><span style="left:0.00%">0.5</span><span style="left:50.00%">0.75</span><span style="left:100.00%">1</span></span></span></a>
-<a class="rrow" href="#p-bda"><span class="rlab"><b>Stock direction</b><small>accuracy, held-out split</small></span>
-      <span class="rtrack" style="--b:0.00%;--r:40.98%"><span class="rseg"></span><span class="rdot b" title="50% coin flip"></span><span class="rdot r"></span><span class="rval">70%</span><span class="rticks" aria-hidden="true"><span style="left:0.00%">50%</span><span style="left:50.00%">75%</span><span style="left:100.00%">100%</span></span></span></a>
-<a class="rrow" href="#p-ops"><span class="rlab"><b>Sports-lottery members</b><small>monthly active</small></span>
-      <span class="rtrack" style="--b:21.67%;--r:83.33%"><span class="rseg"></span><span class="rdot b" title="113 before"></span><span class="rdot r"></span><span class="rval">150</span><span class="rticks" aria-hidden="true"><span style="left:0.00%">100</span><span style="left:50.00%">130</span><span style="left:100.00%">160</span></span></span></a>
-    </div>
-  </section>
 </section>
 
 <section class="zone z-exp" id="experience" aria-labelledby="h-exp">
   <div class="zone-head rv">
-    <h2 id="h-exp">From finance to AI systems that teams keep using</h2>
+    <h2 id="h-exp"><span class="w">From</span> <span class="w">finance</span> <span class="w">to</span> <span class="w">AI</span> <span class="w">systems</span> <span class="w">that</span> <span class="w">teams</span> <span class="w">keep</span> <span class="w">using</span></h2>
     <p>I studied finance, then spent three years building things that real teams run every day: a data pipeline and agents for a retailer, a voice agent and its evaluation at an insurer, and an automated workflow at a treasury desk.</p>
   </div>
   <div class="bento">
@@ -110,7 +94,7 @@
 
 <section class="zone z-work" id="work" aria-labelledby="h-work">
   <div class="zone-head rv">
-    <h2 id="h-work">Projects, each with the number that says how well it worked</h2>
+    <h2 id="h-work"><span class="w">Projects,</span> <span class="w">each</span> <span class="w">with</span> <span class="w">the</span> <span class="w">number</span> <span class="w">that</span> <span class="w">says</span> <span class="w">how</span> <span class="w">well</span> <span class="w">it</span> <span class="w">worked</span></h2>
     <p>Four are on GitHub; the operations system and the evaluation stay private because they run on business and internal data.</p>
   </div>
   <div class="projects">
@@ -118,54 +102,43 @@
     <div class="ptext">
       <p class="metric"><span class="num">+33%</span><span class="lab">monthly active members, 113 to 150</span></p>
       <h3 class="ptitle" id="p-ops">Data and AI operations for a sports-lottery retailer</h3>
-    <p class="meta">Licensed Taiwan Sports Lottery retailer, Digital Operations Partner Lead · Jul. 2023 – present</p>
-    <p>A two-location, government-licensed retailer had member, betting and partner data in separate places, so nobody could see which members were drifting away or which partner channels actually brought turnover. I lead a 7–10 person team (sports analysts, content, events, engineering) running its digital operations.</p>
+      <p class="meta">Licensed Taiwan Sports Lottery retailer, Digital Operations Partner Lead · Jul. 2023 – present</p>
+      <p class="summary">Unified three data sources from two stores into a tested pipeline and BI dashboard. A 5-agent system now writes the team's daily KPI brief.</p>
+      <ul class="tags" aria-label="Tools"><li>Python</li><li>SQLite</li><li>Dash</li><li>RFM segmentation</li><li>Multi-agent systems</li><li>LLM-as-a-judge</li></ul>
+      
+      <details class="more"><summary>More details</summary><div class="more-body"><p>A two-location, government-licensed retailer had member, betting and partner data in separate places, so nobody could see which members were drifting away or which partner channels actually brought turnover. I lead a 7–10 person team (sports analysts, content, events, engineering) running its digital operations.</p>
     <p>I built a data pipeline and BI dashboard in Python, SQLite and Dash that unifies 3 data sources across both locations (19 months, 29K+ member-day records), with RFM segmentation, churn alerts and partner commission tracking, covered by <strong>151 automated tests</strong>. Channel attribution showed partner and KOL channels drove about two-thirds of tagged member turnover; recruiting sports KOCs grew average monthly active members by <strong>33%</strong> (113 to 150).</p>
     <p>On top of the data, I designed a multi-agent operations system: 5 AI agents with permission limits, human kill switches and LLM-as-a-judge content review that produce a daily KPI brief for the team.</p>
-    <ul class="tags" aria-label="Tools"><li>Python</li><li>SQLite</li><li>Dash</li><li>RFM segmentation</li><li>Multi-agent systems</li><li>LLM-as-a-judge</li></ul>
-    <p class="note">Private business system; code and member data are not published.</p>
+    
+    <p class="note">Private business system; code and member data are not published.</p><div class="more-figs"></div></div></details>
     </div>
-    <div class="figs">
-    <figure class="fig">
-    <dl class="stats">
-      <div><dt>Trailing-12-month betting volume</dt><dd>NT$36M</dd></div>
-      <div><dt>Monthly active members</dt><dd>113 → 150</dd></div>
-      <div><dt>Member-day records unified</dt><dd>29K+</dd></div>
-      <div><dt>Automated tests on the pipeline</dt><dd>151</dd></div>
-    </dl>
-    <figcaption>Figures from the retailer's own records; member-level data is not published.</figcaption>
-  </figure>
-    <figure class="flowfig"><ol class="flow" aria-label="Data flow: three sources, pipeline, dashboard, AI agents, daily brief"><li><span class="step">3 data sources</span><span class=sub>2 stores, betting + members + partners</span></li><li><span class="step">Python pipeline</span><span class=sub>SQLite, 151 tests</span></li><li><span class="step">BI dashboard (Dash)</span><span class=sub>RFM, churn alerts, KOL commission</span></li><li><span class="step">5 AI agents</span><span class=sub>permission limits, human kill switch</span></li><li><span class="step">Daily KPI brief</span><span class=sub>for the team</span></li></ol><figcaption>How the system fits together.</figcaption></figure>
-  </div>
+    <div class="figs"><figure class="flowfig"><ol class="flow" aria-label="Data flow: three sources, pipeline, dashboard, AI agents, daily brief"><li><span class="step">3 data sources</span><span class=sub>2 stores, betting + members + partners</span></li><li><span class="step">Python pipeline</span><span class=sub>SQLite, 151 tests</span></li><li><span class="step">BI dashboard (Dash)</span><span class=sub>RFM, churn alerts, KOL commission</span></li><li><span class="step">5 AI agents</span><span class=sub>permission limits, human kill switch</span></li><li><span class="step">Daily KPI brief</span><span class=sub>for the team</span></li></ol><figcaption>How the system fits together.</figcaption></figure></div>
   </article>
 <article class="proj pcard rv" aria-labelledby="p-voice">
     <div class="ptext">
       <p class="metric"><span class="num">3 modes</span><span class="lab">Gemini Live, Azure Realtime and STT–TTS in one interface</span></p>
       <h3 class="ptitle" id="p-voice">Realtime voice customer-service agent</h3>
-    <p class="meta">Cathay Life Insurance, GenAI Intern · Jul. – Dec. 2025</p>
-    <p>Phone customers expect to speak naturally and interrupt, which text chatbots do not handle. I built a browser prototype in React and TypeScript with one interface over two realtime speech APIs, Gemini Live and Azure OpenAI Realtime, including interruption (barge-in) handling, low-latency audio playback and saved transcripts.</p>
-    <p>The demo handles a failed premium payment in a multi-turn call and ends by sending a self-service link. I connected it to internal databases and service APIs for intent recognition and routing, and it became a testing platform the team kept using after the prototype phase. The codebase passes 25 automated tests.</p>
-    <ul class="tags" aria-label="Tools"><li>React</li><li>TypeScript</li><li>Gemini Live API</li><li>Azure OpenAI Realtime</li><li>Web Audio</li></ul>
-    <p class="links"><a class="btn small" href="https://github.com/power7414/realtime-voice-agent"><svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><span>View project</span></a> <a class="btn small primary" href="https://power7414.github.io/realtime-voice-agent/"><span>Try the demo</span></a></p>
+      <p class="meta">Cathay Life Insurance, GenAI Intern · Jul. – Dec. 2025</p>
+      <p class="summary">A browser prototype that runs Gemini Live and Azure OpenAI Realtime behind one interface, with interruption handling. The team kept using it as their testing platform.</p>
+      <ul class="tags" aria-label="Tools"><li>React</li><li>TypeScript</li><li>Gemini Live API</li><li>Azure OpenAI Realtime</li><li>Web Audio</li></ul>
+      <p class="links"><a class="btn small" href="https://github.com/power7414/realtime-voice-agent"><svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><span>View project</span></a> <a class="btn small primary" href="https://power7414.github.io/realtime-voice-agent/"><span>Try the demo</span></a></p>
+      <details class="more"><summary>More details</summary><div class="more-body"><p>Phone customers expect to speak naturally and interrupt, which text chatbots do not handle. I built a browser prototype in React and TypeScript with one interface over two realtime speech APIs, Gemini Live and Azure OpenAI Realtime, including interruption (barge-in) handling, low-latency audio playback and saved transcripts.</p>
+    <p>The demo handles a failed premium payment in a multi-turn call and ends by sending a self-service link. I connected it to internal databases and service APIs for intent recognition and routing, and it became a testing platform the team kept using after the prototype phase. The codebase passes 25 automated tests.</p><div class="more-figs"><figure><div class="browser"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><img src="img/voice-modes.jpg" width="1600" height="956" loading="lazy" alt="Mode picker with three options: Gemini Live, OpenAI Realtime, and speech-to-text plus text-to-speech."></div><figcaption>One interface, three speech back-ends.</figcaption></figure></div></div></details>
     </div>
-    <div class="figs">
-    <figure class="shot"><div class="browser"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><img src="img/voice-demo.gif" width="960" height="570" loading="lazy" alt="Animated demo: a new chat is opened, OpenAI Realtime is selected, and the live transcript fills in: a customer says this month's premium payment failed, the assistant asks about a recent card change and sends a link to update the card and pay."><span class="chip glass" aria-hidden="true">Gemini Live · Azure Realtime</span><a class="chip glass r" href="https://power7414.github.io/realtime-voice-agent/">▶ Try the demo</a><figcaption>Demo: new chat → pick a mode → connect. Scripted offline conversation shown in English (the real system served Mandarin-speaking customers); the internal business prompt is not shown.</figcaption></figure>
-    <figure><div class="browser"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><img src="img/voice-modes.jpg" width="1600" height="956" loading="lazy" alt="Mode picker with three options: Gemini Live, OpenAI Realtime, and speech-to-text plus text-to-speech."></div><figcaption>One interface, three speech back-ends.</figcaption></figure>
-  </div>
+    <div class="figs"><figure class="shot"><div class="browser"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><img src="img/voice-demo.gif" width="960" height="570" loading="lazy" alt="Animated demo: a new chat is opened, OpenAI Realtime is selected, and the live transcript fills in: a customer says this month's premium payment failed, the assistant asks about a recent card change and sends a link to update the card and pay."><span class="chip glass" aria-hidden="true">Gemini Live · Azure Realtime</span><a class="chip glass r" href="https://power7414.github.io/realtime-voice-agent/">▶ Try the demo</a><figcaption>Demo: new chat → pick a mode → connect. Scripted offline conversation shown in English (the real system served Mandarin-speaking customers); the internal business prompt is not shown.</figcaption></figure></div>
   </article>
 <article class="proj pcard rv" aria-labelledby="p-eval">
     <div class="ptext">
       <p class="metric"><span class="num">87%</span><span class="lab">agreement with human labels, 52 of 60</span></p>
       <h3 class="ptitle" id="p-eval">Evaluating an AI customer-service agent</h3>
-    <p class="meta">Cathay Life Insurance, GenAI Intern · Jul. – Dec. 2025</p>
-    <p>Before a service agent goes live, the team needs to know whether it follows the required flow and treats customers well, not only whether it sounds fluent. I designed an evaluation on the Agenta platform that scores each conversation with four weighted checks: three rule-based and one LLM-as-a-judge.</p>
+      <p class="meta">Cathay Life Insurance, GenAI Intern · Jul. – Dec. 2025</p>
+      <p class="summary">Scores every support conversation with three rule-based checks and one LLM judge. The judge matched human labels in 87% of 60 test cases.</p>
+      <ul class="tags" aria-label="Tools"><li>Agenta</li><li>LLM-as-a-judge</li><li>Python</li><li>Test design</li></ul>
+      
+      <details class="more"><summary>More details</summary><div class="more-body"><p>Before a service agent goes live, the team needs to know whether it follows the required flow and treats customers well, not only whether it sounds fluent. I designed an evaluation on the Agenta platform that scores each conversation with four weighted checks: three rule-based and one LLM-as-a-judge.</p>
     <p>The test set combines scripted multi-turn conversations with 30 negative cases that target staying within role, staying on topic, explaining clearly and acknowledging emotion. On a 60-case benchmark, the judge's pass/fail calls matched human labels in <strong>87% of cases</strong> (52 of 60).</p>
-    <ul class="tags" aria-label="Tools"><li>Agenta</li><li>LLM-as-a-judge</li><li>Python</li><li>Test design</li></ul>
-    <p class="note">Built on internal prompts and customer questions, so the code is not published.</p>
-    </div>
-    <div class="figs">
-    <figure class="flowfig"><ol class="flow" aria-label="Evaluation flow"><li><span class="step">Test conversations</span><span class=sub>scripted multi-turn + 30 negative cases</span></li><li><span class="step">Agent under test</span><span class=sub>voice customer-service agent</span></li><li><span class="step">4 weighted checks</span><span class=sub>3 rule-based + 1 LLM judge</span></li><li><span class="step">One score per conversation</span><span class=sub>compared against human labels</span></li></ol><figcaption>How each conversation is scored.</figcaption></figure>
-    <figure class="fig">
+    
+    <p class="note">Built on internal prompts and customer questions, so the code is not published.</p><div class="more-figs"><figure class="fig">
     <div class="chart stack" role="img" aria-label="Weights of the four checks: flow and format 40 percent, intent accuracy 30 percent, tone and empathy judged by an LLM 20 percent, next-step wording 10 percent.">
       <div class="stackbar" aria-hidden="true"><span class="w1" style="flex-basis:40%">40%</span><span class="w2" style="flex-basis:30%">30%</span><span class="w3" style="flex-basis:20%">20%</span><span class="w4" style="flex-basis:10%">10%</span></div>
       <ul class="legend" aria-hidden="true">
@@ -176,23 +149,23 @@
       </ul>
     </div>
     <figcaption>Each conversation gets one weighted score from four checks.</figcaption>
-  </figure>
-  </div>
+  </figure></div></div></details>
+    </div>
+    <div class="figs"><figure class="flowfig"><ol class="flow" aria-label="Evaluation flow"><li><span class="step">Test conversations</span><span class=sub>scripted multi-turn + 30 negative cases</span></li><li><span class="step">Agent under test</span><span class=sub>voice customer-service agent</span></li><li><span class="step">4 weighted checks</span><span class=sub>3 rule-based + 1 LLM judge</span></li><li><span class="step">One score per conversation</span><span class=sub>compared against human labels</span></li></ol><figcaption>How each conversation is scored.</figcaption></figure></div>
   </article>
 <article class="proj pcard rv" aria-labelledby="p-esun">
     <div class="ptext">
       <p class="metric"><span class="num">88.67%</span><span class="lab">precision@1, up from a 71.33% baseline</span></p>
       <h3 class="ptitle" id="p-esun">Retrieval for bank customer questions</h3>
-    <p class="meta">E.SUN Bank AI RAG Competition (T-Brain), 2024 · team of 3 · shortlisted in the preliminary round</p>
-    <p>Given a customer question, the system must find the one correct document among insurance policies, financial reports and FAQs. I tested how accurately each candidate embedding model retrieved the right document, and built the reranking step for financial-report questions, where long reports are split into overlapping chunks and embedding scores are fused with BM25.</p>
+      <p class="meta">E.SUN Bank AI RAG Competition (T-Brain), 2024 · team of 3 · shortlisted in the preliminary round</p>
+      <p class="summary">Find the one right document for a bank customer's question. A hybrid BM25 and embedding pipeline reaches 88.67% precision@1, up from a 71.33% baseline.</p>
+      <ul class="tags" aria-label="Tools"><li>Python</li><li>BM25</li><li>Conan-embedding</li><li>Hybrid retrieval</li><li>jieba</li></ul>
+      <p class="links"><a class="btn small" href="https://github.com/power7414/esun-ai-rag-retrieval"><svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><span>View project</span></a></p>
+      <details class="more"><summary>More details</summary><div class="more-body"><p>Given a customer question, the system must find the one correct document among insurance policies, financial reports and FAQs. I tested how accurately each candidate embedding model retrieved the right document, and built the reranking step for financial-report questions, where long reports are split into overlapping chunks and embedding scores are fused with BM25.</p>
     <p>On the 150 official sample questions, a single reproducible pipeline reaches <strong>88.67% precision@1</strong>, up from the official baseline of 71.33%.</p>
-    <p class="note">Methods were compared on the same 150 public questions; there is no held-out set.</p>
-    <ul class="tags" aria-label="Tools"><li>Python</li><li>BM25</li><li>Conan-embedding</li><li>Hybrid retrieval</li><li>jieba</li></ul>
-    <p class="links"><a class="btn small" href="https://github.com/power7414/esun-ai-rag-retrieval"><svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><span>View project</span></a></p>
+    <p class="note">Methods were compared on the same 150 public questions; there is no held-out set.</p><div class="more-figs"><figure class="flowfig"><ol class="flow" aria-label="Retrieval pipeline from question to top-1 document"><li><span class="step">Customer question</span><span class=sub>with its category</span></li><li><span class="step">Candidate documents</span><span class=sub>FAQ, insurance policy or financial report</span></li><li><span class="step">Retrieve</span><span class=sub>BM25 + embeddings; long reports split into overlapping chunks</span></li><li><span class="step">Rerank (finance)</span><span class=sub>fuse embedding and BM25 scores</span></li><li><span class="step">Top-1 document</span><span class=sub>scored by precision@1</span></li></ol><figcaption>What the system does for each question.</figcaption></figure></div></div></details>
     </div>
-    <div class="figs">
-    <figure class="flowfig"><ol class="flow" aria-label="Retrieval pipeline from question to top-1 document"><li><span class="step">Customer question</span><span class=sub>with its category</span></li><li><span class="step">Candidate documents</span><span class=sub>FAQ, insurance policy or financial report</span></li><li><span class="step">Retrieve</span><span class=sub>BM25 + embeddings; long reports split into overlapping chunks</span></li><li><span class="step">Rerank (finance)</span><span class=sub>fuse embedding and BM25 scores</span></li><li><span class="step">Top-1 document</span><span class=sub>scored by precision@1</span></li></ol><figcaption>What the system does for each question.</figcaption></figure>
-    <figure class="fig">
+    <div class="figs"><figure class="fig">
     <div class="chart dumb" role="img" aria-label="Precision@1 by question type, official baseline to final pipeline: FAQ 90 to 96 percent, insurance 80 to 90, financial reports 44 to 80, overall 71.33 to 88.67.">
       <div class="row"><span class="lab">FAQ<span class="val"><span class="vb">90</span> to <span class="vf">96%</span></span></span><span class="track"><span class="seg" style="left:83.33%;width:10.0%"></span><span class="dot b" style="left:83.33%"></span><span class="dot f" style="left:93.33%"></span></span></div>
       <div class="row"><span class="lab">Insurance<span class="val"><span class="vb">80</span> to <span class="vf">90%</span></span></span><span class="track"><span class="seg" style="left:66.67%;width:16.66%"></span><span class="dot b" style="left:66.67%"></span><span class="dot f" style="left:83.33%"></span></span></div>
@@ -201,24 +174,23 @@
       <div class="row axisrow" aria-hidden="true"><span></span><span class="ticks"><span style="left:0%">40%</span><span style="left:33.33%">60%</span><span style="left:66.67%">80%</span><span style="left:100%">100%</span></span></div>
     </div>
     <figcaption><span class="key b"></span>Official baseline <span class="key f"></span>Final pipeline. Precision@1, 50 questions per type.</figcaption>
-  </figure>
-  </div>
+  </figure></div>
   </article>
 <article class="proj pcard rv" aria-labelledby="p-bda">
     <div class="ptext">
       <p class="metric"><span class="num">0.85</span><span class="lab">AUC for order-failure prediction</span></p>
       <h3 class="ptitle" id="p-bda">Prediction from text and behavior data</h3>
-    <p class="meta">Big Data &amp; Business Analytics, National Taiwan University, spring 2025 · two team projects, 6 people</p>
-    <h4>Will an online order fail?</h4>
+      <p class="meta">Big Data &amp; Business Analytics, National Taiwan University, spring 2025 · two team projects, 6 people</p>
+      <p class="summary">Predicted failed e-commerce orders from pre-order behaviour (AUC 0.85) and a stock's direction from 9,139 forum posts (70% accuracy).</p>
+      <ul class="tags" aria-label="Tools"><li>Python</li><li>TensorFlow / Keras</li><li>scikit-learn</li><li>XGBoost</li><li>jieba</li></ul>
+      <p class="links"><a class="btn small" href="https://github.com/power7414/order-failure-prediction"><svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><span>View project: orders</span></a></p><p class="links"><a class="btn small" href="https://github.com/power7414/stock-forum-signal"><svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><span>View project: stock</span></a></p>
+      <details class="more"><summary>More details</summary><div class="more-body"><h4>Will an online order fail?</h4>
     <p>Using 3.4 million e-commerce orders from 91APP, where about 12% fail, the team asked whether shopping behavior before an order signals failure. I built the DNN, LSTM and GRU models on counts of 18 behaviors in the 72 hours before each order. The DNN reached <strong>AUC 0.85</strong>, and 0.86 on orders that had behavior records.</p>
-    <p class="links"><a class="btn small" href="https://github.com/power7414/order-failure-prediction"><svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><span>View project</span></a></p>
+    
     <h4>Can news and forum posts predict a stock's direction?</h4>
-    <p>For Innolux (3481), I did the preprocessing: filtering 9,139 forum and news posts by keyword, labeling them by the price move 5 days later, and building TF-IDF and chi-square features. Across six classifiers, the best ensemble (random forest, naive Bayes and XGBoost) reached <strong>70% accuracy</strong> on a held-out test split. In a stricter day-by-day backtest over two years, it was right <strong>60% of the time</strong> on the 3,407 calls it made confidently.</p>
-    <p class="links"><a class="btn small" href="https://github.com/power7414/stock-forum-signal"><svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><span>View project</span></a></p>
-    <ul class="tags" aria-label="Tools"><li>Python</li><li>TensorFlow / Keras</li><li>scikit-learn</li><li>XGBoost</li><li>jieba</li></ul>
+    <p>For Innolux (3481), I did the preprocessing: filtering 9,139 forum and news posts by keyword, labeling them by the price move 5 days later, and building TF-IDF and chi-square features. Across six classifiers, the best ensemble (random forest, naive Bayes and XGBoost) reached <strong>70% accuracy</strong> on a held-out test split. In a stricter day-by-day backtest over two years, it was right <strong>60% of the time</strong> on the 3,407 calls it made confidently.</p><div class="more-figs"><figure><div class="chart bars" role="img" aria-label="Stock direction accuracy by model: random forest 69.17, naive Bayes 67.14, SVM 65.99, XGBoost 64.93, decision tree 62.37, KNN 61.57, ensemble 70.49, ensemble in rolling backtest 59.99 percent."><div class="row"><span class="lab">Random forest</span><span class="track"><span class="bar b" style="width:76.68%"></span><span class="v b" style="left:76.68%">69.2%</span></span></div><div class="row"><span class="lab">Naive Bayes</span><span class="track"><span class="bar b" style="width:68.56%"></span><span class="v b" style="left:68.56%">67.1%</span></span></div><div class="row"><span class="lab">SVM</span><span class="track"><span class="bar b" style="width:63.96%"></span><span class="v b" style="left:63.96%">66.0%</span></span></div><div class="row"><span class="lab">XGBoost</span><span class="track"><span class="bar b" style="width:59.72%"></span><span class="v b" style="left:59.72%">64.9%</span></span></div><div class="row"><span class="lab">Decision tree</span><span class="track"><span class="bar b" style="width:49.48%"></span><span class="v b" style="left:49.48%">62.4%</span></span></div><div class="row"><span class="lab">KNN</span><span class="track"><span class="bar b" style="width:46.28%"></span><span class="v b" style="left:46.28%">61.6%</span></span></div><div class="row"><span class="lab">Ensemble RF+NB+XGB</span><span class="track"><span class="bar f" style="width:81.96%"></span><span class="v f" style="left:81.96%">70.5%</span></span></div><div class="row"><span class="lab">Ensemble, rolling backtest</span><span class="track"><span class="bar f" style="width:39.96%"></span><span class="v f" style="left:39.96%">60.0%</span></span></div><div class="row axisrow" aria-hidden="true"><span></span><span class="ticks"><span style="left:0.00%">50%</span><span style="left:20.00%">55%</span><span style="left:40.00%">60%</span><span style="left:60.00%">65%</span><span style="left:80.00%">70%</span><span style="left:100.00%">75%</span></span></div></div><figcaption>Stock direction, accuracy on the held-out split (50% is a coin flip). The last bar is the stricter day-by-day backtest.</figcaption></figure></div></div></details>
     </div>
-    <div class="figs">
-    <figure class="fig">
+    <div class="figs"><figure class="fig">
     <div class="chart bars" role="img" aria-label="Order-failure models by AUC, where 0.5 is chance: DNN 0.850, LSTM 0.705, GRU 0.704; DNN on orders with behavior records 0.858.">
       <div class="row"><span class="lab">DNN</span><span class="track"><span class="bar f" style="width:87.42%"></span><span class="v f" style="left:87.42%">0.850</span></span></div>
       <div class="row"><span class="lab">LSTM</span><span class="track"><span class="bar b" style="width:51.17%"></span><span class="v b" style="left:51.17%">0.705</span></span></div>
@@ -227,15 +199,13 @@
       <div class="row axisrow" aria-hidden="true"><span></span><span class="ticks"><span style="left:0%">0.5</span><span style="left:25%">0.6</span><span style="left:50%">0.7</span><span style="left:75%">0.8</span><span style="left:100%">0.9</span></span></div>
     </div>
     <figcaption>Order-failure prediction, AUC (0.5 is chance). LSTM had the highest recall (0.77), useful for early warning.</figcaption>
-  </figure>
-    <figure><div class="chart bars" role="img" aria-label="Stock direction accuracy by model: random forest 69.17, naive Bayes 67.14, SVM 65.99, XGBoost 64.93, decision tree 62.37, KNN 61.57, ensemble 70.49, ensemble in rolling backtest 59.99 percent."><div class="row"><span class="lab">Random forest</span><span class="track"><span class="bar b" style="width:76.68%"></span><span class="v b" style="left:76.68%">69.2%</span></span></div><div class="row"><span class="lab">Naive Bayes</span><span class="track"><span class="bar b" style="width:68.56%"></span><span class="v b" style="left:68.56%">67.1%</span></span></div><div class="row"><span class="lab">SVM</span><span class="track"><span class="bar b" style="width:63.96%"></span><span class="v b" style="left:63.96%">66.0%</span></span></div><div class="row"><span class="lab">XGBoost</span><span class="track"><span class="bar b" style="width:59.72%"></span><span class="v b" style="left:59.72%">64.9%</span></span></div><div class="row"><span class="lab">Decision tree</span><span class="track"><span class="bar b" style="width:49.48%"></span><span class="v b" style="left:49.48%">62.4%</span></span></div><div class="row"><span class="lab">KNN</span><span class="track"><span class="bar b" style="width:46.28%"></span><span class="v b" style="left:46.28%">61.6%</span></span></div><div class="row"><span class="lab">Ensemble RF+NB+XGB</span><span class="track"><span class="bar f" style="width:81.96%"></span><span class="v f" style="left:81.96%">70.5%</span></span></div><div class="row"><span class="lab">Ensemble, rolling backtest</span><span class="track"><span class="bar f" style="width:39.96%"></span><span class="v f" style="left:39.96%">60.0%</span></span></div><div class="row axisrow" aria-hidden="true"><span></span><span class="ticks"><span style="left:0.00%">50%</span><span style="left:20.00%">55%</span><span style="left:40.00%">60%</span><span style="left:60.00%">65%</span><span style="left:80.00%">70%</span><span style="left:100.00%">75%</span></span></div></div><figcaption>Stock direction, accuracy on the held-out split (50% is a coin flip). The last bar is the stricter day-by-day backtest.</figcaption></figure>
-  </div>
+  </figure></div>
   </article>
   </div>
 </section>
 
 <section class="zone z-awards" id="awards" aria-labelledby="h-awards">
-  <div class="zone-head rv"><h2 id="h-awards">Awards</h2></div>
+  <div class="zone-head rv"><h2 id="h-awards"><span class="w">Awards</span></h2></div>
   <div class="bento awards-bento">
     <article class="bcard rv">
       <ol class="awards">
@@ -256,7 +226,7 @@
 <footer class="contact" id="contact" aria-labelledby="h-contact">
   <div class="contact-inner">
     <div class="contact-head">
-      <h2 id="h-contact">Let's talk</h2>
+      <h2 id="h-contact"><span class="w">Let's</span> <span class="w">talk</span></h2>
       <p>Graduate programs, research or project work: any of these reaches me.</p>
     </div>
     <ul class="clinks">

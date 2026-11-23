@@ -2,10 +2,57 @@
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var html = document.documentElement;
 
-  // Ruler: markers start at the baseline and travel to the result once, on load.
+  // Hero entrance: photo unveils from the bottom, text rises in sequence.
   if (!reduce) {
-    html.classList.add('ruler-start');
-    requestAnimationFrame(function () { requestAnimationFrame(function () { html.classList.remove('ruler-start'); html.classList.add('ruler-go'); }); });
+    html.classList.add('hero-start');
+    requestAnimationFrame(function () { requestAnimationFrame(function () { html.classList.remove('hero-start'); html.classList.add('hero-go'); }); });
+  }
+
+  // Scroll-linked motion: zones settle into place, headings fill in word by word,
+  // the hero photo drifts slower than the page. Everything is computed from scroll position.
+  if (!reduce) {
+    html.classList.add('motion');
+    var zones = [].slice.call(document.querySelectorAll('.zone, .contact'));
+    var heads = [].slice.call(document.querySelectorAll('.zone-head h2, .contact-head h2')).map(function (h) { return { el: h, w: [].slice.call(h.querySelectorAll('.w')) }; });
+    var photo = document.querySelector('.photo-card img');
+    var wide = window.matchMedia('(min-width: 900px)');
+    var ticking = false;
+    function clamp(x) { return x < 0 ? 0 : x > 1 ? 1 : x; }
+    function frame() {
+      ticking = false;
+      var vh = window.innerHeight;
+      zones.forEach(function (z) {
+        var t = z.getBoundingClientRect().top;
+        var p = clamp((vh - t) / (vh * 0.5));
+        var k = wide.matches ? 1 : 0.5;
+        z.style.transform = 'translateY(' + ((1 - p) * 80 * k).toFixed(1) + 'px) scale(' + (0.965 + 0.035 * p).toFixed(4) + ')';
+      });
+      heads.forEach(function (h) {
+        var t = h.el.getBoundingClientRect().top;
+        var p = clamp((vh * 0.9 - t) / (vh * 0.4));
+        var n = h.w.length, lit = Math.round(p * n);
+        h.w.forEach(function (w, i) { w.classList.toggle('lit', i < lit); });
+      });
+      if (photo && wide.matches) {
+        var y = Math.min(window.scrollY, vh);
+        photo.style.transform = 'translateY(' + (y * 0.12).toFixed(1) + 'px) scale(1.08)';
+      } else if (photo) { photo.style.transform = ''; }
+    }
+    function req() { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }
+    window.addEventListener('scroll', req, { passive: true });
+    window.addEventListener('resize', req);
+    frame();
+  }
+
+  // Award photos fan out from a stack when they come into view.
+  var stack = document.querySelector('.stack');
+  if (stack) {
+    if (reduce || !('IntersectionObserver' in window)) stack.classList.add('fanned');
+    else {
+      stack.classList.add('stacked');
+      var so = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { stack.classList.remove('stacked'); stack.classList.add('fanned'); so.disconnect(); } }); }, { threshold: 0.45 });
+      so.observe(stack);
+    }
   }
 
   // Gentle reveal as sections enter the viewport (content stays visible without JS or with reduced motion).
