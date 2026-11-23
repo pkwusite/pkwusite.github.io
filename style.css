@@ -308,3 +308,17 @@ h1 .cn { font-size: .45em; font-weight: 400; color: var(--muted); letter-spacing
 }
 .btn.small.primary { background: var(--result); border-color: var(--result); color: #fff; }
 .btn.small.primary:hover { background: var(--ink); border-color: var(--ink); }
+
+/* Hero photo + about photo */
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) 17rem; gap: 3rem; align-items: center; }
+.hero-photo { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: 30% 20%; border-radius: 50%; }
+.about-wrap { display: grid; grid-template-columns: minmax(0, 46rem) 13rem; gap: 3rem; align-items: start; }
+.about-photo { margin: 0; }
+.about-photo img { display: block; width: 100%; height: auto; border-radius: 6px; }
+.about-photo figcaption { font-size: .8125rem; color: var(--muted); margin-top: .5rem; }
+@media (max-width: 760px) {
+  .hero { grid-template-columns: 1fr; gap: 1.5rem; }
+  .hero-photo { width: 9rem; order: -1; }
+  .about-wrap { grid-template-columns: 1fr; gap: 1.5rem; }
+  .about-photo { max-width: 13rem; }
+}
