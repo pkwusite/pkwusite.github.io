@@ -296,13 +296,14 @@ h1 .cn { font-size: .45em; font-weight: 400; color: var(--muted); letter-spacing
 .flow .step { display: block; font-weight: 600; font-size: .9375rem; }
 .flow .sub { display: block; font-size: .8125rem; color: var(--muted); line-height: 1.4; }
 
-.awards-wrap { display: grid; grid-template-columns: minmax(0, 1fr) 16rem; gap: 2.5rem; align-items: start; }
+.awards-wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2.5rem; align-items: start; }
+.award-photos { display: grid; grid-template-columns: 3fr 2fr; gap: 1rem; align-items: start; }
 .award-photo { margin: 0; }
 .award-photo img { display: block; width: 100%; height: auto; border-radius: 6px; }
 .award-photo figcaption { font-size: .8125rem; color: var(--muted); margin-top: .5rem; }
 @media (max-width: 560px) {
   .awards-wrap { grid-template-columns: 1fr; }
-  .award-photo { max-width: 16rem; }
+  .award-photos { grid-template-columns: 1fr 1fr; }
   .repo-url { display: block; margin: .4rem 0 0; }
 }
 .btn.small.primary { background: var(--result); border-color: var(--result); color: #fff; }
