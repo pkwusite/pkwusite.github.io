@@ -14,13 +14,13 @@
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-    document.querySelectorAll('.rv, .timeline li').forEach(function (el) { io.observe(el); });
+    document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
   }
 
   // Nav: active section + reading progress
   var links = [].slice.call(document.querySelectorAll('.navlinks a'));
   var secs = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
-  var bar = document.querySelector('.topnav .progress');
+  var bar = document.querySelector('.navlinks .progress');
   function nav() {
     var max = html.scrollHeight - html.clientHeight;
     if (bar) bar.style.transform = 'scaleX(' + (max > 0 ? window.scrollY / max : 0) + ')';
@@ -33,9 +33,9 @@
   var toc = document.getElementById('toc'), bars = [], tlinks = [], tsecs = [];
   if (toc) {
     var rail = toc.querySelector('.rail'), menu = toc.querySelector('.menu');
-    var items = [['top', 'PK Wu', 1], ['about', 'About', 1], ['experience', 'Experience', 1], ['work', 'Projects', 1]];
+    var items = [['top', 'PK Wu', 1], ['experience', 'Experience', 1], ['work', 'Projects', 1]];
     document.querySelectorAll('.proj .ptitle').forEach(function (h) { items.push([h.id, h.textContent, 2]); });
-    items.push(['awards', 'Awards', 1]);
+    items.push(['awards', 'Awards', 1], ['contact', 'Contact', 1]);
     items.forEach(function (it) {
       var b = document.createElement('i'); b.className = 'l' + it[2]; rail.appendChild(b); bars.push(b);
       var a = document.createElement('a'); a.href = '#' + it[0]; a.textContent = it[1]; a.className = 'l' + it[2]; menu.appendChild(a); tlinks.push(a);
@@ -54,7 +54,7 @@
 
   // Lightbox
   var lb = document.getElementById('lightbox'), li = document.getElementById('lightbox-img'), lc = document.getElementById('lightbox-cap'), last = null;
-  document.querySelectorAll('.figs img, .award-photo img, .about-photo img').forEach(function (img) {
+  document.querySelectorAll('.figs img, .stack img, .bcard.photo img').forEach(function (img) {
     img.classList.add('zoomable'); img.tabIndex = 0; img.setAttribute('role', 'button');
     img.setAttribute('aria-label', 'Enlarge image: ' + img.alt);
     function open() {
