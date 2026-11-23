@@ -352,3 +352,21 @@ img.zoomable { cursor: zoom-in; }
   .award-photos { grid-template-columns: 1fr 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { .btn, .toc .menu, .toc .rail i { transition: none; } }
+
+/* ---------- Section tints: each block gets its own full-width band ---------- */
+html, body { overflow-x: clip; }
+.sec { --tint: transparent; isolation: isolate; padding-bottom: 4.5rem; }
+.sec::before { content: ""; position: absolute; top: 0; bottom: 0; left: calc(50% - 50vw); right: calc(50% - 50vw); background: var(--tint); z-index: -1; }
+.sec::after { content: ""; position: absolute; top: 0; left: calc(50% - 50vw); right: calc(50% - 50vw); height: 1px; background: rgba(21,33,43,.06); z-index: -1; }
+#about { --tint: rgba(255,255,255,.72); }
+#experience { --tint: rgba(221,240,232,.85); }
+#work { --tint: rgba(250,251,253,.92); }
+#awards { --tint: rgba(232,236,250,.88); }
+.hero { padding-bottom: 4rem; }
+.foot { padding-top: 3rem; }
+/* elements that used the ground colour adapt to their band */
+#experience .timeline::before { border-color: rgba(11,110,79,.22); }
+#experience .timeline li::after { background: #ddf0e8; }
+#experience .timeline li:first-child::after { background: var(--result); }
+#work .tags li { background: #fff; }
+@media (max-width: 960px) { .sec { padding-bottom: 3.5rem; } }
