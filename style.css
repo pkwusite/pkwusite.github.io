@@ -316,31 +316,6 @@ img.zoomable { cursor: zoom-in; }
 .legend .sw { position: absolute; left: 0; top: .2em; width: .9rem; height: .9rem; }
 .legend .sub { display: block; font-size: .875rem; color: var(--muted); }
 
-/* Footer */
-.foot p { margin: 0 0 1rem; }
-.foot p:first-child { border-top: 1px solid var(--line); padding-top: 2rem; }
-.foot {
-  padding-bottom: 4rem;
-  color: var(--muted); font-size: .875rem;
-}
-
-/* Tablet and below */
-@media (max-width: 900px) {
-  .skills { grid-template-columns: repeat(2, 1fr); }
-  .project { grid-template-columns: 1fr; gap: 1.75rem; padding: 3rem 0; }
-  .fig { position: static; order: -1; }
-}
-
-@media (max-width: 560px) {
-  body { font-size: 1rem; }
-  .chart .row { grid-template-columns: 7.25rem minmax(0, 1fr); gap: .75rem; }
-  .stackbar span { padding-left: .3rem; }
-  .intro, main, .foot, .block, .topnav { padding-left: 1rem; padding-right: 1rem; }
-  .intro { padding-top: 3rem; padding-bottom: 2.5rem; }
-  .lede { font-size: 1.1875rem; }
-  .skills { grid-template-columns: 1fr; gap: 1rem; }
-  h2 { font-size: 1.5rem; }
-}
 
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; }
