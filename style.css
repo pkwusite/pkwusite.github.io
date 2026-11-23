@@ -458,3 +458,17 @@ img.zoomable { cursor: zoom-in; }
 .stack.fanned .p2 { transition-delay: .08s; }
 /* the floating brand needs its own glass so it never sits on top of content */
 .brand { padding: .55rem 1rem; border-radius: 999px; background: rgba(255,255,255,.6); -webkit-backdrop-filter: blur(16px) saturate(1.6); backdrop-filter: blur(16px) saturate(1.6); border: 1px solid rgba(255,255,255,.85); box-shadow: 0 8px 28px rgba(20,40,32,.10); }
+
+/* ===== review fixes ===== */
+.nav-contact { display: none; }
+@media (max-width: 760px) {
+  .nav-contact { display: inline-block; }
+  .navlinks a { padding: .4rem .7rem; font-size: .875rem; }
+  /* phone: name and statement first, photo second and shorter */
+  .photo-card { order: 0; aspect-ratio: 16 / 11; }
+  .photo-card img { object-position: 30% 22%; }
+  /* award photos side by side, captions below, no overlap */
+  .stack { height: auto; display: grid; grid-template-columns: 1.4fr 1fr; gap: .75rem; align-items: start; }
+  .stack .ph, .stack.stacked .p1, .stack.stacked .p2, .stack .p1, .stack .p2 { position: static; width: auto; transform: none; padding: .4rem .4rem 0; }
+  .stack .ph figcaption { position: static; padding: .35rem .1rem .45rem; }
+}
