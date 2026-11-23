@@ -447,3 +447,6 @@ img.zoomable { cursor: zoom-in; }
   .stack .ph, .stack.stacked .p1, .stack.stacked .p2, .stack .p1, .stack .p2 { position: static; width: auto; transform: none; padding: .4rem .4rem 0; }
   .stack .ph figcaption { position: static; padding: .35rem .1rem .45rem; }
 }
+.diagram-fig { margin: 0; }
+.diagram { display: block; width: 100%; height: auto; background: #fbfcfb; border: 1px solid var(--line); border-radius: 16px; padding: .75rem; }
+.diagram-fig figcaption { margin-top: .7rem; font-size: .8125rem; color: var(--muted); line-height: 1.5; }
